@@ -9,12 +9,11 @@ const generateTarget = number => {
 };
 
 const compareGuesses = (humanGuess, computerGuess, target) => {
-    if (Math.abs(humanGuess - target) < Math.abs(computerGuess - target)) {
+    if (Math.abs(humanGuess - target) <= Math.abs(computerGuess - target)) {
         return true;
-    } else if (Math.abs(computerGuess - target) < Math.abs(humanGuess - target)) {
+    } 
+    else {
         return false;
-    } else {
-        return true;
     }
 };
 
